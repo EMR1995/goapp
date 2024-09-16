@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Agendamentos</title>
+    <style>
+        body {
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #2573c0;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 8px;
+        }
+        .main-content {
+            padding: 20px;
+
+        }
+        .title-section {
+            background-color: yellow;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .title-section h1 {
+            color: #2573c0;
+            margin: 0;
+        }
+        .btn-custom {
+            background-color: #2573c0;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px; /* Adiciona espaço entre os botões */
+        }
+        .btn-custom:hover {
+            background-color: #1b5ea1;
+        }
+        footer {
+            background-color: #2573c0;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .form-section {
+            background-color: #9fcfff;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }  /* by Erik Moura Rangel */
+    </style>
+</head>
+<body>
+    <header>
+        <img src="imagens/agendamento.jpg" alt="Imagem responsiva">
+    </header>
+    <div class="main-content container">
+        <div class="title-section">
+            <h1>Agendamentos</h1>
+        </div>
+        <div class="form-section">
+            <form>
+                <div class="form-check mb-3">
+                    <input type="radio" name="problem" id="problem1" value="injecao" class="form-check-input">
+                    <label for="problem1" class="form-check-label">Problema na injeção eletrônica</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="radio" name="problem" id="problem2" value="motor" class="form-check-input">
+                    <label for="problem2" class="form-check-label">Problema no funcionamento do motor</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="radio" name="problem" id="problem3" value="suspensao" class="form-check-input">
+                    <label for="problem3" class="form-check-label">Problema na suspensão</label>
+                </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nome completo</label>
+                    <input type="text" id="name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="contact" class="form-label">Telefone de Contato</label>
+                    <input type="tel" id="contact" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Mensagem</label>
+                    <textarea id="message" class="form-control"></textarea>
+                </div>
+                <div class="form-check mb-3">
+                    <input type="checkbox" id="robotCheck" class="form-check-input">
+                    <label for="robotCheck" class="form-check-label">Não sou robô</label>
+                </div>
+                <button type="submit" class="btn btn-warning">Confirmar</button>
+            </form>
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center mt-4">
+                <li class="page-item">
+                    <a href="delivery%20&%20SOS.html" class="page-link btn-custom">Delivery & SOS</a>
+                </li>
+                <li class="page-item">
+                    <a href="mecanica%20geral.html" class="page-link btn-custom">Mecânica Geral</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <footer>
+        <p>Mecanico GO APP</p>
+    </footer>
+</body>
+</html>

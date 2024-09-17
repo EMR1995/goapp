@@ -22,6 +22,25 @@
             max-width: 200px;
             border-radius: 8px;
         }
+        @keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+        header img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 8px;
+    animation: zoomInOut 5s infinite;
+}
+
         .main-content {
             padding: 20px;
         }

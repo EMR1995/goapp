@@ -21,6 +21,7 @@
             width: 100%;
             max-width: 200px;
             border-radius: 8px;
+            animation: zoomInOut 5s infinite;
         }
         @keyframes zoomInOut {
             0% {
@@ -33,14 +34,6 @@
                 transform: scale(1);
             }
         }
-
-        header img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 8px;
-            animation: zoomInOut 5s infinite;
-        }
-
         @keyframes blink {
             0% {
                 opacity: 1;
@@ -52,7 +45,23 @@
                 opacity: 1;
             }
         }
-
+        @keyframes blink-fast {
+            0% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.25;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
         .main-content {
             padding: 20px;
         }
@@ -75,25 +84,19 @@
             font-size: 30px;
             text-align: center;
             transition: background-color 0.3s;
-            animation: blink 1s infinite; /* Adiciona a animação de piscar */
+            animation: blink 1s infinite; /* Animação padrão de piscar */
         }
         .btn-red {
-            background-color: #00ff3c; 
-        }
-        .btn-red:hover {
             background-color: #00ff3c; 
         }
         .btn-yellow-dark {
             background-color: rgb(236, 236, 0); 
         }
-        .btn-yellow-dark:hover {
-            background-color: rgb(236, 236, 0); 
-        }
         .btn-green {
             background-color: #ff0000; 
         }
-        .btn-green:hover {
-            background-color: #ff0000; 
+        .btn-blink-fast {
+            animation: blink-fast 0.5s infinite; /* Animação de piscar mais rápida */
         }
         .nav-container {
             display: flex;
@@ -124,17 +127,17 @@
             <h1>Como posso ajudar?</h1>
         </div>
         <div class="nav-container">
-            <a href="page/agendamentos.html">
-                <button type="button" class="btn-custom btn-red">
-                    Cadastre - se grátis
+            <a href="page/agendamentos.html" aria-label="Cadastre-se grátis">
+                <button type="button" class="btn-custom btn-red btn-blink-fast">
+                    Cadastre-se grátis
                 </button>
             </a>
-            <a href="page/mecanica geral.html">
+            <a href="page/mecanica geral.html" aria-label="Mecânico até você">
                 <button type="button" class="btn-custom btn-yellow-dark">
                     Mecânico até você  
                 </button>
             </a>
-            <a href="page/delivery & SOS.html">
+            <a href="page/delivery & SOS.html" aria-label="Emergência & SOS">
                 <button type="button" class="btn-custom btn-green">
                     Emergência & SOS
                 </button>

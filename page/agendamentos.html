@@ -26,7 +26,7 @@
             padding: 20px;
         }
         .title-section {
-            background-color: yellow;
+            background-color: green;
             border-radius: 8px;
             padding: 20px;
             text-align: center;
@@ -48,6 +48,17 @@
         .btn-custom:hover {
             background-color: #1b5ea1;
         }
+        .btn-confirm {
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+        .btn-confirm:hover {
+            background-color: darkgreen;
+        }
         footer {
             background-color: #2573c0;
             color: #fff;
@@ -63,6 +74,9 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+        .text-center {
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -71,7 +85,7 @@
     </header>
     <div class="main-content container">
         <div class="title-section">
-            <h1>Agendamentos</h1>
+            <h1>Cadastre-se</h1>
         </div>
         <div class="form-section">
             <form>
@@ -103,7 +117,9 @@
                     <input type="checkbox" id="robotCheck" class="form-check-input">
                     <label for="robotCheck" class="form-check-label">Não sou robô</label>
                 </div>
-                <button type="submit" class="btn btn-warning">Confirmar</button>
+                <div class="text-center">
+                    <button type="submit" class="btn btn-confirm">Confirmar</button>
+                </div>
             </form>
         </div>
         <nav aria-label="Page navigation">

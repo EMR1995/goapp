@@ -48,6 +48,18 @@
         .btn-custom:hover {
             background-color: #1b5ea1;
         }
+        .btn-confirm {
+            background-color: green;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px; 
+        }
+        .btn-confirm:hover {
+            background-color: darkgreen;
+        }
         footer {
             background-color: #2573c0;
             color: #fff;
@@ -64,12 +76,10 @@
             height: 100px;
         }
 
-        
         .form-section {
             text-align: center;
         }
         
-       
         @keyframes slide {
             0% {
                 transform: translateX(0);
@@ -100,17 +110,29 @@
             <form>
                 <div class="mb-3">
                     <label for="name" class="form-label">Nome completo</label>
-                    <input type="text" id="name" class="form-control">
+                    <input type="text" id="name" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="contact" class="form-label">Telefone de Contato</label>
-                    <input type="tel" id="contact" class="form-control">
+                    <input type="tel" id="contact" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="email" id="email" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Senha</label>
+                    <input type="password" id="password" class="form-control" required>
+                </div>
+                <div class="mb-3">
+                    <label for="confirm-password" class="form-label">Confirmar Senha</label>
+                    <input type="password" id="confirm-password" class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="message" class="form-label">Descrição do Problema</label>
-                    <textarea id="message" class="form-control"></textarea>
+                    <textarea id="message" class="form-control" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-warning">Confirmar</button>
+                <button type="submit" class="btn btn-confirm">Confirmar</button>
             </form>
         </div>
         <nav aria-label="Page navigation">
@@ -119,7 +141,7 @@
                     <a href="page/emergencia & SOS.html" class="page-link btn-custom">Emergência & SOS</a>
                 </li>
                 <li class="page-item">
-                    <a href="page/mecanico vai ate voce.html" class="page-link btn-custom">Mecânico vai ate você </a>
+                    <a href="page/mecanico vai ate voce.html" class="page-link btn-custom">Mecânico vai até você </a>
                 </li>
             </ul>
         </nav>

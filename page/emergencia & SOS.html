@@ -104,16 +104,16 @@
             <h1>Emergencia & SOS</h1>
         </div>
         <section class="form-section text-center">
-            <form>
+            <form id="appointment-form">
                 <fieldset>
                     <legend>Escolha uma opção</legend>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="delivery" value="delivery" class="form-check-input">
-                        <label for="delivery" class="form-check-label">Emergrncia</label>
+                        <label for="delivery" class="form-check-label">Emergência local</label>
                     </div>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="sos" value="sos" class="form-check-input">
-                        <label for="sos" class="form-check-label">SOS</label>
+                        <label for="sos" class="form-check-label">SOS 24</label>
                     </div>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="other" value="other" class="form-check-input">
@@ -132,10 +132,10 @@
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center">
                 <li class="page-item">
-                    <a href="page/mecanico vai ate voce.html" class="page-link btn-custom btn-amarelo">Mecânico vai ate você</a>
+                    <a href="page/mecanico vai ate voce.html" class="page-link btn-custom btn-amarelo">Mecânico vai até você</a>
                 </li>
                 <li class="page-item">
-                    <a href="page/cadastre - se aqui.html" class="page-link btn-custom btn-verde"> Inscreva - se aqui </a>
+                    <a href="page/cadastre - se aqui.html" class="page-link btn-custom btn-verde">Inscreva-se aqui</a>
                 </li>
             </ul>
         </nav>
@@ -157,6 +157,21 @@
             const lat = position.coords.latitude;
             const lon = position.coords.longitude;
             document.getElementById("location-output").innerHTML = `Latitude: ${lat} <br> Longitude: ${lon}`;
+
+            // Enviar dados para o servidor
+            const appointmentType = document.querySelector('input[name="appointment"]:checked')?.value || 'não especificado';
+            const data = { latitude: lat, longitude: lon, appointmentType };
+
+            fetch('http://localhost:5000/api/location', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(data => console.log('Sucesso:', data))
+            .catch((error) => console.error('Erro:', error));
         }
 
         function showError(error) {

@@ -83,6 +83,12 @@
         .form-section textarea {
             height: 100px;
         }
+        fieldset {
+            border: none;
+        }
+        .form-check {
+            text-align: center; /* Center the radio options */
+        }
     </style>
 </head>
 <body>
@@ -96,9 +102,8 @@
         <div class="form-section">
             <p class="text-center">Descreva o problema que está enfrentando e forneça os detalhes necessários.</p>
             <form>
-        
                 <fieldset>
-                    <legend>Escolha uma opção</legend>
+                    <legend class="text-center">Escolha uma opção</legend>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="delivery" value="delivery" class="form-check-input">
                         <label for="delivery" class="form-check-label"> Emergência </label>
@@ -112,7 +117,6 @@
                         <label for="other" class="form-check-label">Outros</label>
                     </div>
                 </fieldset>
-            </form>
                 <div class="mb-3">
                     <label for="message" class="form-label">Descrição do Problema</label>
                     <textarea id="message" class="form-control"></textarea>
@@ -128,7 +132,7 @@
                     <a href="page/cadastre - se aqui.html" class="page-link btn-custom"> Cadastre - se aqui </a>
                 </li>
                 <li class="page-item">
-                    <a href="page/emergencia & SOS.htmll" class="page-link btn-custom"> Emergencia & SOS </a>
+                    <a href="page/emergencia & SOS.html" class="page-link btn-custom"> Emergência & SOS </a>
                 </li>
             </ul>
         </nav>

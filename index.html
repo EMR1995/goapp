@@ -84,7 +84,7 @@
             font-size: 30px;
             text-align: center;
             transition: background-color 0.3s;
-            animation: blink 1s infinite; /* Animação padrão de piscar */
+            animation: blink-fast 0.5s infinite; /* Animação de piscar para todos */
         }
         .btn-red {
             background-color: #00ff3c; 
@@ -94,9 +94,6 @@
         }
         .btn-green {
             background-color: #ff0000; 
-        }
-        .btn-blink-fast {
-            animation: blink-fast 0.5s infinite; /* Animação de piscar mais rápida */
         }
         .nav-container {
             display: flex;
@@ -128,7 +125,7 @@
         </div>
         <div class="nav-container">
             <a href="page/agendamentos.html" aria-label="Cadastre-se grátis">
-                <button type="button" class="btn-custom btn-red btn-blink-fast">
+                <button type="button" class="btn-custom btn-red">
                     Cadastre-se grátis
                 </button>
             </a>

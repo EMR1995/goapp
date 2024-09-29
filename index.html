@@ -34,34 +34,6 @@
                 transform: scale(1);
             }
         }
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        @keyframes blink-fast {
-            0% {
-                opacity: 1;
-            }
-            25% {
-                opacity: 0.25;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            75% {
-                opacity: 0.25;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
         .main-content {
             padding: 20px;
         }
@@ -83,11 +55,10 @@
             padding: 20px 20px;
             font-size: 30px;
             text-align: center;
-            transition: background-color 0.3s;
-            animation: blink-fast 1s infinite; /* Tempo de animação aumentado */
         }
         .btn-red {
             background-color: #00ff3c; 
+            animation: blink-fast 1s infinite; /* Botão piscando */
         }
         .btn-yellow-dark {
             background-color: rgb(236, 236, 0); 
@@ -112,6 +83,16 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
         }
     </style>
 </head>
@@ -138,6 +119,17 @@
                 <button type="button" class="btn-custom btn-green">
                     Emergência & SOS
                 </button>
+            </a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
             </a>
         </div>
     </div>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -28,6 +28,11 @@
             50% { transform: scale(1.1); }
             100% { transform: scale(1); }
         }
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
         .main-content {
             padding: 20px;
         }
@@ -46,19 +51,20 @@
             color: #fff;
             border: none;
             border-radius: 8px;
-            padding: 20px 20px;
-            font-size: 30px;
+            padding: 15px 20px;
+            font-size: 20px;
+            width: 250px; /* Largura fixa para os botões */
         }
         .btn-red {
             background-color: #00ff3c; 
-            animation: blink-fast 1s infinite; /* Botão piscando */
+            animation: blink 1s infinite; /* Botão piscando */
         }
         .btn-yellow-dark { background-color: rgb(236, 236, 0); }
         .btn-green { background-color: #ff0000; }
         .nav-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center; /* Alinhamento centralizado */
             gap: 20px;
         }
         footer {
@@ -71,12 +77,10 @@
             bottom: 0;
         }
         .social-icons {
-            position: fixed;
-            bottom: 80px; /* Ajuste a altura conforme necessário */
-            right: 20px; /* Margem da direita */
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             gap: 15px;
+            margin-top: 20px; /* Espaço acima dos ícones */
         }
         .social-icons img {
             width: 40px;
@@ -109,17 +113,17 @@
                 </button>
             </a>
         </div>
-    </div>
-    <div class="social-icons">
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        </a>
-        <a href="https://wa.me/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-        </a>
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
     </div>
     <footer>
         <h2>Mecanico GO APP</h2>

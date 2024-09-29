@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title> Cadastre - se aqui </title>
+    <title>Cadastre-se Aqui</title>
     <style>
         body {
             background-color: #9fcfff;
@@ -36,29 +36,18 @@
             color: #2573c0;
             margin: 0;
         }
-        .btn-custom {
+        .btn-custom, .btn-confirm {
             background-color: #2573c0;
             color: #fff;
             border: none;
             border-radius: 8px;
             padding: 10px 20px;
             font-size: 18px;
-            margin: 10px; 
+            margin: 10px;
+            width: 100%; /* Largura total do botão */
         }
-        .btn-custom:hover {
+        .btn-custom:hover, .btn-confirm:hover {
             background-color: #1b5ea1;
-        }
-        .btn-confirm {
-            background-color: #00ffcc;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 18px;
-            margin: 10px; 
-        }
-        .btn-confirm:hover {
-            background-color: darkgreen;
         }
         footer {
             background-color: #2573c0;
@@ -75,33 +64,14 @@
         .form-section textarea {
             height: 100px;
         }
-
         .form-section {
             text-align: center;
         }
-        footer {
-            background-color: #2573c0;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        @media (min-width: 576px) {
+            .form-section {
+                max-width: 600px; /* Limitar a largura do formulário em telas maiores */
+                margin: auto; /* Centralizar o formulário */
             }
-        @keyframes slide {
-            0% {
-                transform: translateX(0);
-            }
-            50% {
-                transform: translateX(10px);
-            }
-            100% {
-                transform: translateX(0);
-            }
-        }
-
-        .btn-warning {
-            animation: slide 1s infinite; 
         }
     </style>
 </head>
@@ -111,7 +81,7 @@
     </header>
     <div class="main-content container">
         <div class="title-section">
-            <h1> Cadastre - se aqui </h1>
+            <h1>Cadastre-se Aqui</h1>
         </div>
         <div class="form-section">
             <p class="text-center">Descreva o problema que está enfrentando e forneça os detalhes necessários.</p>
@@ -143,7 +113,7 @@
                 <button type="submit" class="btn btn-confirm">Confirmar</button>
             </form>
         </div>
-    
+    </div>
     <footer>
         <p>Mecanico GO APP</p>
     </footer>

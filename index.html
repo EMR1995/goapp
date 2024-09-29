@@ -24,15 +24,9 @@
             animation: zoomInOut 5s infinite;
         }
         @keyframes zoomInOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
         }
         .main-content {
             padding: 20px;
@@ -54,26 +48,18 @@
             border-radius: 8px;
             padding: 20px 20px;
             font-size: 30px;
-            text-align: center;
         }
         .btn-red {
             background-color: #00ff3c; 
             animation: blink-fast 1s infinite; /* Botão piscando */
         }
-        .btn-yellow-dark {
-            background-color: rgb(236, 236, 0); 
-        }
-        .btn-green {
-            background-color: #ff0000; 
-        }
+        .btn-yellow-dark { background-color: rgb(236, 236, 0); }
+        .btn-green { background-color: #ff0000; }
         .nav-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-        }
-        .nav-container a {
-            text-decoration: none;
         }
         footer {
             background-color: #2573c0;
@@ -85,9 +71,11 @@
             bottom: 0;
         }
         .social-icons {
-            margin-top: 20px;
+            position: fixed;
+            bottom: 80px; /* Ajuste a altura conforme necessário */
+            right: 20px; /* Margem da direita */
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             gap: 15px;
         }
         .social-icons img {
@@ -121,17 +109,17 @@
                 </button>
             </a>
         </div>
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="https://wa.me/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-            </a>
-        </div>
+    </div>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+        </a>
     </div>
     <footer>
         <h2>Mecanico GO APP</h2>

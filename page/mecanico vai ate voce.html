@@ -11,6 +11,10 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            padding-bottom: 70px; /* Espaço para o rodapé */
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Altura mínima da página */
         }
         header {
             background-color: #2573c0;
@@ -32,6 +36,7 @@
             }
         }
         .main-content {
+            flex: 1; /* Expande para ocupar espaço disponível */
             padding: 20px;
         }
         .title-section {
@@ -45,6 +50,18 @@
             color: #2573c0;
             margin: 0;
         }
+        .btn-confirm {
+            background-color: yellow; /* Cor do botão Confirmar */
+            color: #000; /* Texto em preto para contraste */
+            border: none;
+            border-radius: 8px;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px 0; /* Margem para separação */
+        }
+        .btn-confirm:hover {
+            background-color: gold; /* Cor ao passar o mouse */
+        }
         .btn-custom {
             background-color: #2573c0;
             color: #fff;
@@ -52,30 +69,19 @@
             border-radius: 8px;
             padding: 10px 20px;
             font-size: 18px;
-            margin: 10px; 
+            margin: 10px 0; /* Margem para separação */
+            width: 100%; /* Largura total */
         }
         .btn-custom:hover {
             background-color: #1b5ea1;
-        }
-        .btn-confirm {
-            background-color: green;
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 10px 20px;
-            font-size: 18px;
-        }
-        .btn-confirm:hover {
-            background-color: darkgreen;
         }
         footer {
             background-color: #2573c0;
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            position: fixed;
             width: 100%;
-            bottom: 0;
+            position: relative; /* Alinhado com a tela */
         }
         .form-section label {
             font-weight: bold;
@@ -87,7 +93,13 @@
             border: none;
         }
         .form-check {
-            text-align: center; /* Center the radio options */
+            text-align: center; /* Centralizar as opções de rádio */
+        }
+        @media (min-width: 576px) {
+            .form-section {
+                max-width: 600px; /* Limitar a largura do formulário em telas maiores */
+                margin: auto; /* Centralizar o formulário */
+            }
         }
     </style>
 </head>
@@ -106,11 +118,11 @@
                     <legend class="text-center">Escolha uma opção</legend>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="delivery" value="delivery" class="form-check-input">
-                        <label for="delivery" class="form-check-label"> Emergência </label>
+                        <label for="delivery" class="form-check-label">Emergência</label>
                     </div>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="sos" value="sos" class="form-check-input">
-                        <label for="sos" class="form-check-label"> SOS 24h </label>
+                        <label for="sos" class="form-check-label">SOS 24h</label>
                     </div>
                     <div class="form-check">
                         <input type="radio" name="appointment" id="other" value="other" class="form-check-input">
@@ -119,21 +131,22 @@
                 </fieldset>
                 <div class="mb-3">
                     <label for="message" class="form-label">Descrição do Problema</label>
-                    <textarea id="message" class="form-control"></textarea>
+                    <textarea id="message" class="form-control" required></textarea>
                 </div>
                 <div class="d-flex justify-content-center">
                     <button type="submit" class="btn btn-confirm">Confirmar</button>
                 </div>
             </form>
-    
+        </div>
+
         <nav aria-label="Page navigation">
             <ul class="pagination justify-content-center mt-4">
                 <li class="page-item">
-                    <a href="page/cadastre - se aqui.html" class="page-link btn-custom"> Cadastre - se aqui </a>
+                    <a href="page/cadastre - se aqui.html" class="page-link btn-custom">Cadastre-se Aqui</a>
                 </li>
-                
             </ul>
         </nav>
+    </div>
     <footer>
         <p>Mecanico GO APP</p>
     </footer>

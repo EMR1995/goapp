@@ -11,6 +11,9 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
         }
         header {
             background-color: #2573c0;
@@ -30,6 +33,7 @@
         }
         .main-content {
             padding: 20px;
+            flex: 1; /* Permite que o conteúdo principal cresça e empurre o rodapé para o fundo */
         }
         .title-section {
             background-color: #0056b3;
@@ -73,7 +77,7 @@
             color: #fff;
             padding: 20px 0; /* Mais espaço em cima e embaixo */
             text-align: center;
-            margin-top: 20px; /* Espaço acima do rodapé */
+            width: 100%; /* Garante que o rodapé ocupe 100% da largura */
         }
         .social-icons {
             display: flex;
@@ -118,20 +122,20 @@
                 <button type="button" class="btn-custom btn-green">Emergência & SOS</button>
             </a>
         </div>
-        <footer>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/mecanico_go_app2.0?igsh=MW01cGhobWZrczBiNA==" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-                </a>
-                <a href="https://wa.me/" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-                </a>
-                <a href="https://www.facebook.com" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-                </a>
-            </div>
-            <h2>APLICATIVO Mecanico GO</h2>
-        </footer>
     </div>
+    <footer>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/mecanico_go_app2.0?igsh=MW01cGhobWZrczBiNA==" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+            </a>
+            <a href="https://wa.me/" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+            </a>
+            <a href="https://www.facebook.com" target="_blank">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+            </a>
+        </div>
+        <h2>APLICATIVO Mecanico GO</h2>
+    </footer>
 </body>
 </html>

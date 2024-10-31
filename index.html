@@ -75,18 +75,22 @@
             width: 100%;
             bottom: 0;
         }
-       .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 10px; /* Ajuste esta margem para 10px ou menos */
-    margin-bottom: 20px; /* Se preferir, pode adicionar uma margem inferior */
-}
-
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px; /* Ajuste a margem superior */
+            margin-bottom: 20px; /* Margem inferior se desejado */
         }
         .social-icons img {
-            width: 40px;
-            height: 40px;
+            width: 30px; /* Tamanho padrão */
+            height: 30px; /* Tamanho padrão */
+        }
+        @media (max-width: 576px) { /* Para telas pequenas */
+            .social-icons img {
+                width: 25px; /* Diminuir para telas pequenas */
+                height: 25px; /* Diminuir para telas pequenas */
+            }
         }
     </style>
 </head>
@@ -109,34 +113,20 @@
                 <button type="button" class="btn-custom btn-green">Emergência & SOS</button>
             </a>
         </div>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/mecanico_go_app2.0?igsh=MW01cGhobWZrczBiNA==" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="https://wa.me/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-            </a>
-        </div>
+        <footer>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/mecanico_go_app2.0?igsh=MW01cGhobWZrczBiNA==" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                </a>
+                <a href="https://wa.me/" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
+                </a>
+            </div>
+            <h2>Mecanico GO APP </h2>
+        </footer>
     </div>
-    <footer>
-        <h2> <footer>
-    <div class="social-icons">
-        <a href="https://www.instagram.com/mecanico_go_app2.0?igsh=MW01cGhobWZrczBiNA==" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-        </a>
-        <a href="https://wa.me/" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        </a>
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-        </a>
-    </div>
-    <h2>APLICATIVO Mecanico GO</h2>
-</footer>
- </h2>
-    </footer>
 </body>
 </html>

@@ -41,14 +41,16 @@
         .title-section h1 {
             color: #fff;
             margin: 0;
+            font-size: 2rem; /* Tamanho responsivo */
         }
         .btn-custom {
             color: #fff;
             border: none;
             border-radius: 8px;
             padding: 15px 20px;
-            font-size: 20px;
-            width: 250px;
+            font-size: 1.25rem; /* Tamanho responsivo */
+            width: 100%; /* Botão ocupa 100% do espaço */
+            max-width: 250px; /* Largura máxima para botões */
         }
         .btn-red {
             background-color: #00ff3c;
@@ -71,16 +73,14 @@
             color: #fff;
             padding: 10px 0;
             text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+            position: relative; /* Alterado para se ajustar ao conteúdo */
         }
         .social-icons {
             display: flex;
             justify-content: center;
             gap: 15px;
-            margin-top: 10px; /* Ajuste a margem superior */
-            margin-bottom: 20px; /* Margem inferior se desejado */
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
         .social-icons img {
             width: 30px; /* Tamanho padrão */
@@ -90,6 +90,12 @@
             .social-icons img {
                 width: 25px; /* Diminuir para telas pequenas */
                 height: 25px; /* Diminuir para telas pequenas */
+            }
+            .title-section h1 {
+                font-size: 1.5rem; /* Reduzir tamanho do título */
+            }
+            .btn-custom {
+                font-size: 1rem; /* Tamanho do botão */
             }
         }
     </style>
@@ -125,7 +131,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
                 </a>
             </div>
-            <h2>Mecanico GO APP </h2>
+            <h2>APLICATIVO Mecanico GO</h2>
         </footer>
     </div>
 </body>

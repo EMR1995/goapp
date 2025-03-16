@@ -7,13 +7,10 @@
     <title>MecanicoGO2.0</title>
     <style>
         body {
-            background-color: #9fcfff;
+            background-color: #f8f9fa;
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Garante que o corpo ocupe toda a altura da tela */
         }
         header {
             background-color: #2573c0;
@@ -27,13 +24,46 @@
             animation: zoomInOut 5s infinite;
         }
         @keyframes zoomInOut {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes blink-fast {
+            0% {
+                opacity: 1;
+            }
+            25% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            75% {
+                opacity: 0.25;
+            }
+            100% {
+                opacity: 1;
+            }
         }
         .main-content {
             padding: 20px;
-            flex: 1; /* Permite que o conteúdo principal cresça e empurre o rodapé para o fundo */
         }
         .title-section {
             background-color: #0056b3;
@@ -45,61 +75,43 @@
         .title-section h1 {
             color: #fff;
             margin: 0;
-            font-size: 2rem; /* Tamanho responsivo */
         }
         .btn-custom {
             color: #fff;
             border: none;
             border-radius: 8px;
-            padding: 15px 20px;
-            font-size: 1.25rem; /* Tamanho responsivo */
-            width: 100%; /* Botão ocupa 100% do espaço */
-            max-width: 250px; /* Largura máxima para botões */
+            padding: 20px 20px;
+            font-size: 30px;
+            text-align: center;
+            transition: background-color 0.3s;
+            animation: blink-fast 1s infinite; /* Tempo de animação aumentado */
         }
         .btn-red {
-            background-color: #00ff3c;
-            animation: blink 1s infinite;
+            background-color: #00ff3c; 
         }
         .btn-yellow-dark {
-            background-color: rgb(236, 236, 0);
+            background-color: rgb(236, 236, 0); 
         }
         .btn-green {
-            background-color: #ff0000;
+            background-color: #ff0000; 
         }
         .nav-container {
             display: flex;
-            flex-direction: column;
-            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
+        }
+        .nav-container a {
+            text-decoration: none;
         }
         footer {
             background-color: #2573c0;
             color: #fff;
-            padding: 20px 0; /* Mais espaço em cima e embaixo */
+            padding: 10px 0;
             text-align: center;
-            width: 100%; /* Garante que o rodapé ocupe 100% da largura */
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 10px 0; /* Margem acima e abaixo dos ícones */
-        }
-        .social-icons img {
-            width: 30px; /* Tamanho padrão */
-            height: 30px; /* Tamanho padrão */
-        }
-        @media (max-width: 576px) { /* Para telas pequenas */
-            .social-icons img {
-                width: 25px; /* Diminuir para telas pequenas */
-                height: 25px; /* Diminuir para telas pequenas */
-            }
-            .title-section h1 {
-                font-size: 1.5rem; /* Reduzir tamanho do título */
-            }
-            .btn-custom {
-                font-size: 1rem; /* Tamanho do botão */
-            }
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
@@ -113,29 +125,24 @@
         </div>
         <div class="nav-container">
             <a href="page/cadastre - se aqui.html" aria-label="Cadastre-se grátis">
-                <button type="button" class="btn-custom btn-red">Cadastre-se grátis</button>
+                <button type="button" class="btn-custom btn-red">
+                    Cadastre-se grátis
+                </button>
             </a>
-            <a href="página/mecanico vai ate voce.html" aria-label="Mecânico até você">
-                <button type="button" class="btn-custom btn-yellow-dark">Mecânico até você</button>
+            <a href="page/mecanico vai ate voce.html" aria-label="Mecânico até você">
+                <button type="button" class="btn-custom btn-yellow-dark">
+                    Mecânico até você  
+                </button>
             </a>
-            <a href="página/emergencia & SOS.html" aria-label="Emergência & SOS">
-                <button type="button" class="btn-custom btn-green">Emergência & SOS</button>
+            <a href="page/emergencia & SOS.html" aria-label="Emergência & SOS">
+                <button type="button" class="btn-custom btn-green">
+                    Emergência & SOS
+                </button>
             </a>
         </div>
     </div>
     <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/mecanico_go_app2.0?igsh=MW01cGhobWZrczBiNA==" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
-            </a>
-            <a href="https://wa.me/" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook">
-            </a>
-        </div>
-        <h2> Mecanico GO APP</h2>
+        <h2>Mecanico GO APP</h2>
     </footer>
 </body>
 </html>

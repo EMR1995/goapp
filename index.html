@@ -1,148 +1,147 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>MecanicoGO2.0</title>
-    <style>
-        body {
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        header {
-            background-color: #2573c0;
-            padding: 10px 0;
-            text-align: center;
-        }
-        header img {
-            width: 100%;
-            max-width: 200px;
-            border-radius: 8px;
-            animation: zoomInOut 5s infinite;
-        }
-        @keyframes zoomInOut {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        @keyframes blink-fast {
-            0% {
-                opacity: 1;
-            }
-            25% {
-                opacity: 0.25;
-            }
-            50% {
-                opacity: 0.5;
-            }
-            75% {
-                opacity: 0.25;
-            }
-            100% {
-                opacity: 1;
-            }
-        }
-        .main-content {
-            padding: 20px;
-        }
-        .title-section {
-            background-color: #0056b3;
-            border-radius: 8px;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .title-section h1 {
-            color: #fff;
-            margin: 0;
-        }
-        .btn-custom {
-            color: #fff;
-            border: none;
-            border-radius: 8px;
-            padding: 20px 20px;
-            font-size: 30px;
-            text-align: center;
-            transition: background-color 0.3s;
-            animation: blink-fast 1s infinite; /* Tempo de animação aumentado */
-        }
-        .btn-red {
-            background-color: #00ff3c; 
-        }
-        .btn-yellow-dark {
-            background-color: rgb(236, 236, 0); 
-        }
-        .btn-green {
-            background-color: #ff0000; 
-        }
-        .nav-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
-        .nav-container a {
-            text-decoration: none;
-        }
-        footer {
-            background-color: #2573c0;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Encontre mecânicos próximos de você com o MecânicoGO. Atendimento rápido e confiável com apenas um clique." />
+  <meta name="theme-color" content="#007bff" />
+  <meta property="og:title" content="MecânicoGO - Encontre Mecânicos Perto de Você" />
+  <meta property="og:description" content="Serviço rápido, geolocalização e contato direto com mecânicos via WhatsApp e Facebook." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mecanicogo.app" />
+  <meta property="og:image" content="/imagens/preview.jpg" />
+
+  <link rel="icon" href="/favicon.ico" />
+  <title>MecânicoGO - Atendimento Rápido</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+      color: #333;
+      padding: 2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #007bff;
+      text-align: center;
+    }
+
+    .button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      width: 100%;
+      max-width: 900px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 1rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: #666;
+      text-align: center;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <img src="./home.jpg" alt="Imagem responsiva">
-    </header>
-    <div class="main-content container">
-        <div class="title-section">
-            <h1>Como posso ajudar?</h1>
-        </div>
-        <div class="nav-container">
-            <a href="page/cadastre - se aqui.html" aria-label="Cadastre-se grátis">
-                <button type="button" class="btn-custom btn-red">
-                    Cadastre-se grátis
-                </button>
-            </a>
-            <a href="page/mecanico vai ate voce.html" aria-label="Mecânico até você">
-                <button type="button" class="btn-custom btn-yellow-dark">
-                    Mecânico até você  
-                </button>
-            </a>
-            <a href="page/emergencia & SOS.html" aria-label="Emergência & SOS">
-                <button type="button" class="btn-custom btn-green">
-                    Emergência & SOS
-                </button>
-            </a>
-        </div>
+  <h1>MecânicoGO</h1>
+  <button class="button" onclick="abrirMapa()">
+    📍 Localizar Mecânico Próximo
+  </button>
+
+  <div class="cards">
+    <div class="card">
+      <img src="/icons/location.svg" alt="Localização" class="icon" />
+      <h3>Localização em tempo real</h3>
+      <p>Encontre o mecânico mais próximo com apenas um clique.</p>
     </div>
-    <footer>
-        <h2>Mecanico GO APP</h2>
-    </footer>
+    <div class="card">
+      <img src="/icons/whatsapp.svg" alt="WhatsApp" class="icon" />
+      <h3>Contato via WhatsApp</h3>
+      <p>Converse diretamente com o profissional e tire suas dúvidas.</p>
+    </div>
+    <div class="card">
+      <img src="/icons/facebook.svg" alt="Facebook" class="icon" />
+      <h3>Perfis Verificados</h3>
+      <p>Confira as avaliações e comentários de outros usuários.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 MecânicoGO - Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function abrirMapa() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          (position) => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            window.open(`https://www.google.com/maps/search/mecanico/@${lat},${lon},15z`, '_blank');
+          },
+          () => {
+            alert("Não foi possível obter sua localização.");
+          }
+        );
+      } else {
+        alert("Geolocalização não é suportada pelo seu navegador.");
+      }
+    }
+  </script>
 </body>
+
 </html>

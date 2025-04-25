@@ -6,17 +6,21 @@
   <title>Login Confirmado</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body, html {
       height: 100%;
       margin: 0;
       font-family: Arial, sans-serif;
       color: #fff;
+      position: relative;
     }
 
     body {
       background: url('page/imagens/mecanica_motos.jpg') no-repeat center center fixed;
       background-size: cover;
-      position: relative;
     }
 
     body::before {
@@ -25,7 +29,12 @@
       top: 0; left: 0;
       width: 100%; height: 100%;
       background: rgba(0, 0, 0, 0.5);
-      z-index: -1;
+      z-index: 0;
+    }
+
+    header, main, footer {
+      position: relative;
+      z-index: 1;
     }
 
     header {
@@ -51,6 +60,7 @@
 
     .btn {
       font-weight: bold;
+      min-width: 140px;
     }
 
     footer {
@@ -75,6 +85,10 @@
       footer img {
         max-width: 80px;
       }
+
+      .btn {
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -94,7 +108,7 @@
   </main>
 
   <footer>
-    <img src="page/imagens/logopequena.png.png" alt="Logo Rodapé" />
+    <img src="page/imagens/logopequena.png" alt="Logo Rodapé" />
     <p>&copy; 2025 Mecânico GO APP</p>
   </footer>
 </body>

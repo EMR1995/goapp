@@ -3,50 +3,159 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mecanico GO APP - Serviços</title>
+  <title>Mecânico GO APP - Serviços</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { background-color: #f8f9fa; font-family: Arial, sans-serif; }
-    header { background-color: #2573c0; padding: 20px; text-align: center; }
-    header img { max-width: 200px; border-radius: 8px; }
-    .service-section { padding: 20px; }
-    .service-card { margin-bottom: 20px; }
-    footer { background-color: #2573c0; color: #fff; text-align: center; padding: 10px 0; }
+    body {
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #2573c0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header img {
+      max-width: 200px;
+      border-radius: 8px;
+    }
+
+    .service-section {
+      padding: 40px 20px;
+    }
+
+    .section-title {
+      color: #2573c0;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .card-title {
+      color: #2573c0;
+      font-weight: bold;
+    }
+
+    .card {
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    footer {
+      background-color: #2573c0;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 576px) {
+      .card-img-top {
+        height: 180px;
+        object-fit: cover;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://via.placeholder.com/200x100.png?text=Logo+Mecanico+GO" alt="Logo Mecanico GO" />
+    <img src="https://via.placeholder.com/200x100.png?text=Logo+Mecanico+GO" alt="Logo Mecânico GO" />
   </header>
+
   <main class="container service-section">
-    <h1 class="text-center mb-4">Nossos Serviços</h1>
+    <h1 class="text-center mb-5">Nossos Serviços</h1>
+
+    <!-- Mecânica Automotiva -->
+    <h2 class="section-title">🚗 Mecânica Automotiva</h2>
     <div class="row">
-      <div class="col-md-6 service-card">
+      <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="https://via.placeholder.com/400x200.png?text=Mecânica+Geral" class="card-img-top" alt="Mecânica Geral" />
+          <img src="https://via.placeholder.com/400x200.png?text=Troca+de+Óleo" class="card-img-top" alt="Troca de Óleo" />
           <div class="card-body">
-            <h5 class="card-title">Mecânica Geral</h5>
-            <p class="card-text">Serviços completos de manutenção e reparo para seu veículo.</p>
+            <h5 class="card-title">Troca de Óleo</h5>
+            <p class="card-text">Serviço rápido com óleo de qualidade e verificação gratuita de filtros.</p>
           </div>
         </div>
       </div>
-      <div class="col-md-6 service-card">
+      <div class="col-md-4 mb-4">
         <div class="card">
-          <img src="https://via.placeholder.com/400x200.png?text=Agendamentos" class="card-img-top" alt="Agendamentos" />
+          <img src="https://via.placeholder.com/400x200.png?text=Freios" class="card-img-top" alt="Freios" />
           <div class="card-body">
-            <h5 class="card-title">Agendamentos</h5>
-            <p class="card-text">Agende seus serviços de forma rápida e prática.</p>
+            <h5 class="card-title">Revisão de Freios</h5>
+            <p class="card-text">Substituição de pastilhas, discos e fluído de freio com garantia.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png?text=Suspensão" class="card-img-top" alt="Suspensão" />
+          <div class="card-body">
+            <h5 class="card-title">Suspensão e Amortecedores</h5>
+            <p class="card-text">Diagnóstico completo e substituição das peças com alinhamento incluso.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center mt-4">
-      <a href="index.html" class="btn btn-secondary">Voltar ao Início</a>
-      <a href="associados.html" class="btn btn-secondary">Área do Associado</a>
+
+    <!-- Mecânica de Moto -->
+    <h2 class="section-title">🏍️ Mecânica de Moto</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png?text=Troca+de+Corrente" class="card-img-top" alt="Corrente" />
+          <div class="card-body">
+            <h5 class="card-title">Troca de Corrente</h5>
+            <p class="card-text">Corrente nova com lubrificação e ajuste de tensão na hora.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png?text=Bateria+de+Moto" class="card-img-top" alt="Bateria" />
+          <div class="card-body">
+            <h5 class="card-title">Bateria e Elétrica</h5>
+            <p class="card-text">Teste e troca de bateria, chicote e sistema de ignição.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Borracheiro -->
+    <h2 class="section-title">🛞 Serviços de Borracharia</h2>
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png?text=Reparo+de+Pneus" class="card-img-top" alt="Reparo de pneus" />
+          <div class="card-body">
+            <h5 class="card-title">Reparo de Pneus</h5>
+            <p class="card-text">Conserto rápido com segurança para carros e motos, com balanceamento incluso.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/400x200.png?text=Calibragem+24h" class="card-img-top" alt="Calibragem 24h" />
+          <div class="card-body">
+            <h5 class="card-title">Calibragem e Atendimento 24h</h5>
+            <p class="card-text">Suporte emergencial na sua localização com atendimento ágil.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="text-center mt-5">
+      <a href="index.html" class="btn btn-secondary me-2">Voltar ao Início</a>
+      <a href="associados.html" class="btn btn-primary">Área do Associado</a>
     </div>
   </main>
+
   <footer>
-    <p>&copy; 2025 Mecanico GO APP</p>
+    <p>&copy; 2025 Mecânico GO APP</p>
   </footer>
 </body>
 </html>

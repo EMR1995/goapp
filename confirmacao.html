@@ -14,10 +14,9 @@
     }
 
     body {
-      background: url('delivery.png') no-repeat center center fixed;
+      background: url('page/imagens/delivery.jpg') no-repeat center center fixed;
       background-size: cover;
       position: relative;
-      z-index: 0;
     }
 
     body::before {
@@ -25,28 +24,29 @@
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
+      background: rgba(0,0,0,0.5); /* leve escurecimento p/ legibilidade */
       z-index: -1;
     }
 
-    header, footer {
+    header {
       background-color: rgba(37, 115, 192, 0.9);
       text-align: center;
       padding: 20px;
     }
 
-    header img, footer img {
+    header img {
       max-width: 200px;
+      height: auto;
       border-radius: 8px;
     }
 
     .content {
       padding: 30px;
       margin-top: 30px;
-      background-color: rgba(255,255,255,0.05);
+      background-color: rgba(0, 0, 0, 0.6);
       border-radius: 10px;
       text-align: center;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(5px);
     }
 
     .btn {
@@ -65,6 +65,29 @@
       margin-top: 20px;
       font-weight: bold;
       color: #28a745;
+    }
+
+    footer {
+      background-color: rgba(37, 115, 192, 0.9);
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer img {
+      max-width: 100px;
+      height: auto;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 576px) {
+      header img {
+        max-width: 150px;
+      }
+
+      footer img {
+        max-width: 80px;
+      }
     }
   </style>
 </head>
@@ -91,8 +114,8 @@
   </main>
 
   <footer>
-    <img src="page/imagens/logopequena.png.png" alt="Logo Pequena" />
-    <p class="mt-2">&copy; 2025 Mecânico GO APP</p>
+    <img src="page/imagens/logopequena.png.png" alt="Logo Rodapé" />
+    <p>&copy; 2025 Mecânico GO APP</p>
   </footer>
 
   <script>
